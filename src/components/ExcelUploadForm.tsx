@@ -81,7 +81,7 @@ export const ExcelUploadForm: React.FC<ExcelUploadFormProps> = ({ onSuccess }) =
           <div className="py-6 flex flex-col items-center justify-center gap-3">
             <Loader2 className="w-10 h-10 text-blue-600 animate-spin" />
             <p className="text-sm font-medium text-slate-800">{loadingText}</p>
-            <p className="text-xs text-slate-500">Please wait. Duplicate files are stopped automatically.</p>
+            <p className="text-xs text-slate-500">Please wait while the file is processed.</p>
           </div>
         ) : (
           <div className="space-y-4">
