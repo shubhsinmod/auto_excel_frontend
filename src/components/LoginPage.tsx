@@ -35,8 +35,8 @@ export const LoginPage = ({ onLogin }: LoginPageProps) => {
             <Layers className="h-5 w-5" aria-hidden="true" />
           </div>
           <div>
-            <p className="text-sm font-semibold tracking-normal">Intelligent Excel-to-SQL</p>
-            <p className="mt-0.5 text-xs text-slate-500">Migration workspace</p>
+            <p className="text-sm font-semibold tracking-normal">DataBridge</p>
+            <p className="mt-0.5 text-xs text-slate-500">Automated Data Migration Platform</p>
           </div>
         </header>
 
@@ -46,10 +46,10 @@ export const LoginPage = ({ onLogin }: LoginPageProps) => {
               <FileSpreadsheet className="h-7 w-7" aria-hidden="true" />
             </div>
             <h1 className="max-w-lg text-4xl font-semibold leading-tight tracking-normal text-slate-950">
-              Your data migration workspace.
+              Move data. Preserve relationships.
             </h1>
             <div className="mt-8 h-px w-20 bg-emerald-700" />
-            <p className="mt-5 text-sm text-slate-500">Secure sign-in for your team workspace.</p>
+            <p className="mt-5 text-sm text-slate-500">Clean, validate, map, and migrate spreadsheet data into relational databases with reliable foreign-key resolution and source-file tracking.</p>
           </div>
 
           <div className="mx-auto w-full max-w-md rounded-2xl border border-slate-200 bg-white p-7 shadow-[0_20px_60px_-40px_rgba(15,23,42,0.4)] sm:p-9">
@@ -123,7 +123,7 @@ export const LoginPage = ({ onLogin }: LoginPageProps) => {
         </section>
 
         <footer className="flex items-center justify-between border-t border-slate-200 pt-4 text-xs text-slate-500">
-          <span>Intelligent Excel-to-SQL</span>
+          <span>DataBridge</span>
           <span>Authorized access only</span>
         </footer>
       </div>

@@ -1,4 +1,4 @@
-import { FileSpreadsheet, Layers } from 'lucide-react';
+import { Layers } from 'lucide-react';
 
 interface NavbarProps {
   username: string;
@@ -15,15 +15,12 @@ export const Navbar: React.FC<NavbarProps> = ({ username, onLogout }) => {
           </div>
           <div>
             <h1 className="text-lg font-bold text-slate-900 flex items-center gap-2">
-              Intelligent Excel-to-SQL
+              DataBridge
             </h1>
-            <p className="text-xs text-slate-500">Automated Schema Discovery & Data Migration Platform</p>
+            <p className="text-xs text-slate-500">Automated Data Migration Platform</p>
           </div>
         </div>
         <div className="flex items-center gap-4 text-xs text-slate-500">
-          <span className="flex items-center gap-1.5 px-2.5 py-1 bg-slate-100 rounded-md font-medium">
-            <FileSpreadsheet className="w-4 h-4 text-emerald-600" /> Excel, CSV, JSON, TXT & Data Files
-          </span>
           <span className="hidden text-sm font-medium text-slate-700 sm:inline">{username}</span>
           <button type="button" onClick={onLogout} className="font-semibold text-slate-600 hover:text-slate-950" title="Sign out">
             Sign out

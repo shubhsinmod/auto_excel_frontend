@@ -44,7 +44,15 @@ export const App: React.FC = () => {
 
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {step === 'UPLOAD_EXCEL' && (
-          <ExcelUploadForm onSuccess={handleExcelUploadSuccess} onBack={() => {}} />
+          <div className="space-y-6">
+            <div className="text-center sm:text-left">
+              <h2 className="text-2xl font-bold text-slate-900 tracking-tight">Move data. Preserve relationships.</h2>
+              <p className="mt-1 text-sm text-slate-500">
+                Clean, validate, map, and migrate spreadsheet data into relational databases with reliable foreign-key resolution and source-file tracking.
+              </p>
+            </div>
+            <ExcelUploadForm onSuccess={handleExcelUploadSuccess} onBack={() => {}} />
+          </div>
         )}
 
         {step === 'RESULT' && excelSession && (
@@ -53,7 +61,7 @@ export const App: React.FC = () => {
       </main>
 
       <footer className="border-t border-slate-200 bg-white py-4 text-center text-xs text-slate-500">
-        Intelligent Excel-to-SQL Data Migration Platform
+        DataBridge - Automated Data Migration Platform
       </footer>
     </div>
   );
