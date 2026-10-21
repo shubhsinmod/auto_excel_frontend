@@ -149,6 +149,9 @@ export const ResultsStep: React.FC<ResultsStepProps> = ({
   };
 
   useEffect(() => {
+    setMaxPercent(5);
+    setResult(null);
+    setJobStatus(null);
     runMigration();
     return () => {
       stopPolling();
