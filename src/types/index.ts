@@ -366,5 +366,27 @@ export interface MigrationJobStatus {
   result?: MigrationExecutionResponse | null;
 }
 
-export type MigrationStep = 'CONNECT_DB' | 'UPLOAD_EXCEL' | 'PROCESSING' | 'RESULT';
+export interface HistoryFileItem {
+  fileId: number | string;
+  uploadId?: string | null;
+  fileName: string;
+  uploadedAt: string;
+  status: 'Completed' | 'Failed' | 'Processing' | string;
+  totalRows?: number | null;
+  totalInserted?: number | null;
+  totalReused?: number | null;
+  source?: string;
+  errorMessage?: string | null;
+}
+
+export interface MigrationHistorySummary {
+  totalFiles: number;
+  completedCount: number;
+  failedCount: number;
+  processingCount: number;
+  totalRowsMigrated: number;
+  files: HistoryFileItem[];
+}
+
+export type MigrationStep = 'CONNECT_DB' | 'UPLOAD_EXCEL' | 'PROCESSING' | 'RESULT' | 'HISTORY';
 

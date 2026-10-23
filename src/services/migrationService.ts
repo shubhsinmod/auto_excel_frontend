@@ -4,7 +4,8 @@ import {
   MigrationExecutionResponse,
   MigrationJobStatus,
   BusinessConcept,
-  CustomMappingRule
+  CustomMappingRule,
+  MigrationHistorySummary
 } from '../types';
 
 export const migrationService = {
@@ -265,6 +266,16 @@ export const migrationService = {
    */
   async getCachedValueMappings(): Promise<any[]> {
     const res = await api.get<any[]>('/mapping/values/cache');
+    return res.data;
+  },
+
+  /**
+   * Fetches migration and upload history including total file counts and summary stats.
+   */
+  async getHistory(limit: number = 200): Promise<MigrationHistorySummary> {
+    const res = await api.get<MigrationHistorySummary>('/migration/history', {
+      params: { limit }
+    });
     return res.data;
   },
 };
